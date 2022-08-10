@@ -19,7 +19,7 @@ const listSchema=new mongoose.Schema({
         type:String,
         required:true,
         lowercase:true,
-        unique:[true,"Email Id already exists!"],
+        unique:[false,"Email Id already exists!"],
         //checking wether the email is valid or not.
         validate(value){
             if(!validator.isEmail(value)){
